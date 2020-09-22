@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Night Toggle</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/a6fbc5f311.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Div element for outer styling -->
+    <div>
+      <!-- Main Check-box for toggeling -->
+
+      <input type="checkbox" class="checkbox" id="checkbox_toggle" />
+      <lable for="checkbox_toggle" class="label" onclick="checkUncheck()">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </lable>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+      reprehenderit optio mollitia aspernatur non laborum? Maxime, minus commodi
+      quos nobis delectus ipsa quidem ea omnis expedita veritatis, velit sit
+      ratione.
+    </p>
+    <script>
+      function checkUncheck() {
+        var checkBox = document.getElementById("checkbox_toggle");
+        if (checkBox.checked == true) {
+          checkBox.checked = false;
+          document.body.classList.toggle("dark", "");
+        } else {
+          checkBox.checked = true;
+          document.body.classList.add("dark");
+        }
+      }
+
+      var checkBox = document.getElementById("checkbox_toggle");
+      checkBox.addEventListener("change", () => {
+        document.body.classList.toggle("dark", "");
+      });
+    </script>
+  </body>
+</html>
